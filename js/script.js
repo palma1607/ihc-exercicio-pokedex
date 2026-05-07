@@ -4,7 +4,7 @@ function returnResponse (response){
     return response.json()
 }
 
-function itemFor (item){
+function itemFor (item, index){
 
     const listPokemon = document.getElementById("poke-list")
 
@@ -12,7 +12,7 @@ function itemFor (item){
     imagePokemon.width = 300
     imagePokemon.height = 300
 
-    imagePokemon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/2.png"
+    imagePokemon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/"+(index + 1)+".png"
 
     const namePokemon = document.createElement("p")
     namePokemon.innerHTML = item.name //item.url
